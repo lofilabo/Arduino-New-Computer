@@ -29,7 +29,7 @@ void setup()
   lcd.print("3"); 
 
   lcd.setCursor(19,3); 
-  lcd.print("H"); 
+  lcd.print("3"); 
 
 }
 
