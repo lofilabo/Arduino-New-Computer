@@ -46,7 +46,40 @@ void setup()
   };
 
   byte customChar1[] = {
+  	0b11001,
+  	0b11001,
   	0b00001,
+  	0b00010,
+  	0b11100,
+  	0b00000,
+  	0b00000,
+  	0b00000
+  };
+
+  byte customChar2[8] = {
+	0b00000,
+	0b10001,
+	0b10001,
+	0b10001,
+	0b01110,
+	0b00000,
+	0b10001,
+	0b11011
+};
+  
+  byte customChar3[8] = {
+  	0b10011,
+  	0b10000,
+  	0b10011,
+  	0b01000,
+  	0b00111,
+  	0b00000,
+  	0b00000,
+  	0b00000
+  };
+
+  byte customChar4[8] = {
+  	0b11111,
   	0b00001,
   	0b00001,
   	0b00001,
@@ -56,19 +89,19 @@ void setup()
   	0b00000
   };
 
-byte customChar2[8] = {
-	0b10001,
-	0b10001,
-	0b10001,
-	0b10001,
-	0b11111,
-	0b00000,
-	0b00000,
-	0b10000
-};
-  
-  byte customChar3[8] = {
-  	0b10000,
+  byte customChar5[8] = {
+  	0b11111,
+  	0b10001,
+  	0b10001,
+  	0b10001,
+  	0b11111,
+  	0b00000,
+  	0b00000,
+  	0b00000
+  };
+
+  byte customChar6[8] = {
+  	0b11111,
   	0b10000,
   	0b10000,
   	0b10000,
@@ -80,23 +113,36 @@ byte customChar2[8] = {
 
   lcd.clear();
   lcd.createChar(0, Heart);
-  lcd.setCursor(1, 1);
+  lcd.setCursor(0, 1);
   lcd.write(0);
+
+
   
   lcd.createChar(1, customChar1);
-  lcd.setCursor(3, 3);
+  lcd.setCursor(7, 0);
   lcd.write(1);
 
-
-
   lcd.createChar(2, customChar2);
-  lcd.setCursor(4, 3);
+  lcd.setCursor(8, 0);
   lcd.write(2);
 
-
   lcd.createChar(3, customChar3);
-  lcd.setCursor(5, 3);
+  lcd.setCursor(9, 0);
   lcd.write(3);
+
+
+  
+  lcd.createChar(4, customChar4);
+  lcd.setCursor(7, 2);
+  lcd.write(4);
+
+  lcd.createChar(5, customChar5);
+  lcd.setCursor(8, 2);
+  lcd.write(5);
+
+  lcd.createChar(6, customChar6);
+  lcd.setCursor(9, 2);
+  lcd.write(6);
 
 
 }
