@@ -31,9 +31,6 @@ void setup()
   lcd.setCursor(18,3); 
   lcd.print("99"); 
   */
-  
-
-  
   byte Heart[] = {
     B00000,
     B01010,
@@ -44,6 +41,30 @@ void setup()
     B00000,
     B00000
   };
+  
+  byte Aliem[] = {
+    B10001,
+    B01010,
+    B11111,
+    B11111,
+    B01110,
+    B01010,
+    B10001,
+    B01010
+  };
+  
+  byte Alien[] = {
+    B11011,
+    B01010,
+    B11111,
+    B10101,
+    B01110,
+    B01010,
+    B10001,
+    B10001
+  };
+  
+
 
   byte customChar1[] = {
   	0b11001,
@@ -113,7 +134,7 @@ void setup()
 
   lcd.clear();
   lcd.createChar(0, Heart);
-  lcd.setCursor(0, 1);
+  lcd.setCursor(0, 0);
   lcd.write(0);
 
 
@@ -144,6 +165,16 @@ void setup()
   lcd.setCursor(9, 2);
   lcd.write(6);
 
+
+
+  lcd.createChar(7, Aliem);
+  lcd.setCursor(16,1);
+  lcd.write(7);
+/*
+  lcd.createChar(9, Alien);
+  lcd.setCursor(18, 1);
+  lcd.write(9);
+*/
 
 }
 
